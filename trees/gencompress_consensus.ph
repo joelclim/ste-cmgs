@@ -1,0 +1,1 @@
+[&R] ((((Cat,(Cow,(Gray_seal,Harbor_seal))),(Chicken,((Rat,House_mouse),(Blue_whale,Finback_whale)))),((Gibbon,(Orangutan,(Gorilla,(Human,(Pygmy_chimpanzee,Chimpanzee))))),(Opossum,Wallaroo))),(Horse,White_rhinoceros));

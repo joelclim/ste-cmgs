@@ -1,0 +1,264 @@
+
+
+ DIST   = percentage divergence (/100)
+ p      = rate of transition (A <-> G; C <-> T)
+ q      = rate of transversion
+ Length = number of sites used in comparison
+   1 vs.   2:  DIST =  0.2701; p = 0.0393; q = 0.2308; length =  15828
+   1 vs.   3:  DIST =  0.2675; p = 0.0453; q = 0.2222; length =  15777
+   1 vs.   4:  DIST =  0.2662; p = 0.0376; q = 0.2285; length =  15835
+   1 vs.   5:  DIST =  0.2682; p = 0.0457; q = 0.2225; length =  15774
+   1 vs.   6:  DIST =  0.3346; p = 0.0414; q = 0.2933; length =  16391
+   1 vs.   7:  DIST =  0.2706; p = 0.0400; q = 0.2306; length =  16340
+   1 vs.   8:  DIST =  0.0415; p = 0.0140; q = 0.0275; length =  16552
+   1 vs.   9:  DIST =  0.1060; p = 0.0274; q = 0.0786; length =  16357
+   1 vs.  10:  DIST =  0.2727; p = 0.0430; q = 0.2297; length =  15891
+   1 vs.  11:  DIST =  0.3237; p = 0.0421; q = 0.2816; length =  16305
+   1 vs.  12:  DIST =  0.2675; p = 0.0371; q = 0.2305; length =  16424
+   1 vs.  13:  DIST =  0.1510; p = 0.0342; q = 0.1167; length =  16448
+   1 vs.  14:  DIST =  0.2950; p = 0.0369; q = 0.2581; length =  16190
+   1 vs.  15:  DIST =  0.2923; p = 0.0367; q = 0.2556; length =  16191
+   1 vs.  16:  DIST =  0.2648; p = 0.0407; q = 0.2241; length =  15808
+   1 vs.  17:  DIST =  0.1660; p = 0.0368; q = 0.1293; length =  16448
+   1 vs.  18:  DIST =  0.3389; p = 0.0465; q = 0.2924; length =  15269
+   1 vs.  19:  DIST =  0.0857; p = 0.0242; q = 0.0615; length =  15987
+   2 vs.   3:  DIST =  0.2374; p = 0.0400; q = 0.1974; length =  16247
+   2 vs.   4:  DIST =  0.0738; p = 0.0175; q = 0.0563; length =  16390
+   2 vs.   5:  DIST =  0.2386; p = 0.0401; q = 0.1985; length =  16244
+   2 vs.   6:  DIST =  0.3054; p = 0.0375; q = 0.2679; length =  15799
+   2 vs.   7:  DIST =  0.2085; p = 0.0327; q = 0.1758; length =  15832
+   2 vs.   8:  DIST =  0.2679; p = 0.0392; q = 0.2287; length =  15823
+   2 vs.   9:  DIST =  0.2697; p = 0.0412; q = 0.2285; length =  15734
+   2 vs.  10:  DIST =  0.2368; p = 0.0408; q = 0.1960; length =  16298
+   2 vs.  11:  DIST =  0.2996; p = 0.0392; q = 0.2604; length =  15780
+   2 vs.  12:  DIST =  0.2096; p = 0.0328; q = 0.1768; length =  15856
+   2 vs.  13:  DIST =  0.2770; p = 0.0435; q = 0.2335; length =  15823
+   2 vs.  14:  DIST =  0.2753; p = 0.0348; q = 0.2405; length =  15768
+   2 vs.  15:  DIST =  0.2731; p = 0.0366; q = 0.2365; length =  15747
+   2 vs.  16:  DIST =  0.2006; p = 0.0341; q = 0.1665; length =  16256
+   2 vs.  17:  DIST =  0.2741; p = 0.0435; q = 0.2306; length =  15830
+   2 vs.  18:  DIST =  0.3461; p = 0.0482; q = 0.2979; length =  15627
+   2 vs.  19:  DIST =  0.2822; p = 0.0416; q = 0.2406; length =  16247
+   3 vs.   4:  DIST =  0.2318; p = 0.0383; q = 0.1936; length =  16254
+   3 vs.   5:  DIST =  0.0372; p = 0.0161; q = 0.0210; length =  16789
+   3 vs.   6:  DIST =  0.3023; p = 0.0418; q = 0.2605; length =  15749
+   3 vs.   7:  DIST =  0.2011; p = 0.0362; q = 0.1648; length =  15792
+   3 vs.   8:  DIST =  0.2665; p = 0.0450; q = 0.2215; length =  15771
+   3 vs.   9:  DIST =  0.2687; p = 0.0466; q = 0.2221; length =  15692
+   3 vs.  10:  DIST =  0.1936; p = 0.0407; q = 0.1529; length =  16720
+   3 vs.  11:  DIST =  0.2922; p = 0.0439; q = 0.2483; length =  15732
+   3 vs.  12:  DIST =  0.1982; p = 0.0354; q = 0.1628; length =  15811
+   3 vs.  13:  DIST =  0.2714; p = 0.0465; q = 0.2249; length =  15772
+   3 vs.  14:  DIST =  0.2632; p = 0.0385; q = 0.2248; length =  15732
+   3 vs.  15:  DIST =  0.2646; p = 0.0399; q = 0.2247; length =  15711
+   3 vs.  16:  DIST =  0.2226; p = 0.0394; q = 0.1832; length =  16177
+   3 vs.  17:  DIST =  0.2675; p = 0.0485; q = 0.2190; length =  15779
+   3 vs.  18:  DIST =  0.3506; p = 0.0522; q = 0.2985; length =  16102
+   3 vs.  19:  DIST =  0.2858; p = 0.0489; q = 0.2370; length =  16348
+   4 vs.   5:  DIST =  0.2342; p = 0.0385; q = 0.1957; length =  16252
+   4 vs.   6:  DIST =  0.3039; p = 0.0357; q = 0.2681; length =  15806
+   4 vs.   7:  DIST =  0.2078; p = 0.0325; q = 0.1753; length =  15835
+   4 vs.   8:  DIST =  0.2638; p = 0.0375; q = 0.2263; length =  15830
+   4 vs.   9:  DIST =  0.2670; p = 0.0406; q = 0.2264; length =  15741
+   4 vs.  10:  DIST =  0.2341; p = 0.0402; q = 0.1939; length =  16305
+   4 vs.  11:  DIST =  0.2957; p = 0.0371; q = 0.2587; length =  15785
+   4 vs.  12:  DIST =  0.2068; p = 0.0317; q = 0.1751; length =  15860
+   4 vs.  13:  DIST =  0.2731; p = 0.0419; q = 0.2312; length =  15830
+   4 vs.  14:  DIST =  0.2718; p = 0.0349; q = 0.2370; length =  15774
+   4 vs.  15:  DIST =  0.2720; p = 0.0358; q = 0.2362; length =  15753
+   4 vs.  16:  DIST =  0.1997; p = 0.0320; q = 0.1677; length =  16266
+   4 vs.  17:  DIST =  0.2718; p = 0.0423; q = 0.2295; length =  15838
+   4 vs.  18:  DIST =  0.3432; p = 0.0466; q = 0.2965; length =  15634
+   4 vs.  19:  DIST =  0.2797; p = 0.0412; q = 0.2385; length =  16254
+   5 vs.   6:  DIST =  0.3027; p = 0.0419; q = 0.2608; length =  15746
+   5 vs.   7:  DIST =  0.2026; p = 0.0366; q = 0.1660; length =  15788
+   5 vs.   8:  DIST =  0.2680; p = 0.0456; q = 0.2224; length =  15768
+   5 vs.   9:  DIST =  0.2678; p = 0.0457; q = 0.2221; length =  15689
+   5 vs.  10:  DIST =  0.1952; p = 0.0422; q = 0.1530; length =  16715
+   5 vs.  11:  DIST =  0.2921; p = 0.0434; q = 0.2487; length =  15730
+   5 vs.  12:  DIST =  0.1992; p = 0.0354; q = 0.1637; length =  15807
+   5 vs.  13:  DIST =  0.2725; p = 0.0473; q = 0.2252; length =  15769
+   5 vs.  14:  DIST =  0.2650; p = 0.0386; q = 0.2264; length =  15731
+   5 vs.  15:  DIST =  0.2658; p = 0.0404; q = 0.2255; length =  15709
+   5 vs.  16:  DIST =  0.2234; p = 0.0392; q = 0.1842; length =  16174
+   5 vs.  17:  DIST =  0.2677; p = 0.0486; q = 0.2192; length =  15776
+   5 vs.  18:  DIST =  0.3495; p = 0.0522; q = 0.2973; length =  16070
+   5 vs.  19:  DIST =  0.2858; p = 0.0491; q = 0.2367; length =  16340
+   6 vs.   7:  DIST =  0.3131; p = 0.0407; q = 0.2724; length =  16471
+   6 vs.   8:  DIST =  0.3338; p = 0.0421; q = 0.2917; length =  16379
+   6 vs.   9:  DIST =  0.3353; p = 0.0434; q = 0.2919; length =  16192
+   6 vs.  10:  DIST =  0.3065; p = 0.0405; q = 0.2660; length =  15988
+   6 vs.  11:  DIST =  0.2371; p = 0.0308; q = 0.2063; length =  16826
+   6 vs.  12:  DIST =  0.3149; p = 0.0380; q = 0.2769; length =  16646
+   6 vs.  13:  DIST =  0.3415; p = 0.0449; q = 0.2966; length =  16291
+   6 vs.  14:  DIST =  0.3021; p = 0.0346; q = 0.2674; length =  16139
+   6 vs.  15:  DIST =  0.3091; p = 0.0375; q = 0.2716; length =  16143
+   6 vs.  16:  DIST =  0.2969; p = 0.0371; q = 0.2598; length =  15820
+   6 vs.  17:  DIST =  0.3406; p = 0.0451; q = 0.2955; length =  16305
+   6 vs.  18:  DIST =  0.3546; p = 0.0431; q = 0.3115; length =  15293
+   6 vs.  19:  DIST =  0.3273; p = 0.0424; q = 0.2849; length =  15827
+   7 vs.   8:  DIST =  0.2688; p = 0.0404; q = 0.2284; length =  16327
+   7 vs.   9:  DIST =  0.2680; p = 0.0417; q = 0.2262; length =  16173
+   7 vs.  10:  DIST =  0.2043; p = 0.0345; q = 0.1698; length =  15848
+   7 vs.  11:  DIST =  0.3049; p = 0.0414; q = 0.2635; length =  16401
+   7 vs.  12:  DIST =  0.1664; p = 0.0350; q = 0.1314; length =  16619
+   7 vs.  13:  DIST =  0.2695; p = 0.0440; q = 0.2255; length =  16234
+   7 vs.  14:  DIST =  0.2726; p = 0.0362; q = 0.2364; length =  16201
+   7 vs.  15:  DIST =  0.2685; p = 0.0388; q = 0.2298; length =  16199
+   7 vs.  16:  DIST =  0.2037; p = 0.0318; q = 0.1720; length =  15804
+   7 vs.  17:  DIST =  0.2706; p = 0.0441; q = 0.2265; length =  16249
+   7 vs.  18:  DIST =  0.3299; p = 0.0457; q = 0.2843; length =  15197
+   7 vs.  19:  DIST =  0.2585; p = 0.0406; q = 0.2179; length =  15781
+   8 vs.   9:  DIST =  0.1062; p = 0.0284; q = 0.0778; length =  16354
+   8 vs.  10:  DIST =  0.2736; p = 0.0439; q = 0.2297; length =  15886
+   8 vs.  11:  DIST =  0.3245; p = 0.0430; q = 0.2815; length =  16292
+   8 vs.  12:  DIST =  0.2676; p = 0.0384; q = 0.2291; length =  16411
+   8 vs.  13:  DIST =  0.1522; p = 0.0369; q = 0.1153; length =  16440
+   8 vs.  14:  DIST =  0.2945; p = 0.0374; q = 0.2572; length =  16181
+   8 vs.  15:  DIST =  0.2913; p = 0.0375; q = 0.2538; length =  16180
+   8 vs.  16:  DIST =  0.2632; p = 0.0410; q = 0.2222; length =  15803
+   8 vs.  17:  DIST =  0.1670; p = 0.0373; q = 0.1297; length =  16442
+   8 vs.  18:  DIST =  0.3397; p = 0.0472; q = 0.2925; length =  15262
+   8 vs.  19:  DIST =  0.0869; p = 0.0255; q = 0.0615; length =  15980
+   9 vs.  10:  DIST =  0.2747; p = 0.0449; q = 0.2298; length =  15788
+   9 vs.  11:  DIST =  0.3252; p = 0.0432; q = 0.2820; length =  16128
+   9 vs.  12:  DIST =  0.2637; p = 0.0396; q = 0.2240; length =  16221
+   9 vs.  13:  DIST =  0.1521; p = 0.0371; q = 0.1150; length =  16309
+   9 vs.  14:  DIST =  0.2946; p = 0.0386; q = 0.2561; length =  16051
+   9 vs.  15:  DIST =  0.2923; p = 0.0399; q = 0.2524; length =  16041
+   9 vs.  16:  DIST =  0.2669; p = 0.0420; q = 0.2249; length =  15715
+   9 vs.  17:  DIST =  0.1690; p = 0.0396; q = 0.1293; length =  16300
+   9 vs.  18:  DIST =  0.3355; p = 0.0481; q = 0.2874; length =  15161
+   9 vs.  19:  DIST =  0.1061; p = 0.0280; q = 0.0780; length =  15878
+  10 vs.  11:  DIST =  0.2987; p = 0.0427; q = 0.2561; length =  15941
+  10 vs.  12:  DIST =  0.2025; p = 0.0363; q = 0.1662; length =  15913
+  10 vs.  13:  DIST =  0.2819; p = 0.0458; q = 0.2361; length =  15887
+  10 vs.  14:  DIST =  0.2636; p = 0.0368; q = 0.2268; length =  15777
+  10 vs.  15:  DIST =  0.2631; p = 0.0381; q = 0.2250; length =  15758
+  10 vs.  16:  DIST =  0.2231; p = 0.0380; q = 0.1851; length =  16268
+  10 vs.  17:  DIST =  0.2758; p = 0.0466; q = 0.2293; length =  15895
+  10 vs.  18:  DIST =  0.3573; p = 0.0512; q = 0.3061; length =  16120
+  10 vs.  19:  DIST =  0.2879; p = 0.0457; q = 0.2422; length =  16430
+  11 vs.  12:  DIST =  0.3023; p = 0.0390; q = 0.2633; length =  16554
+  11 vs.  13:  DIST =  0.3283; p = 0.0444; q = 0.2839; length =  16212
+  11 vs.  14:  DIST =  0.3028; p = 0.0364; q = 0.2663; length =  16112
+  11 vs.  15:  DIST =  0.3057; p = 0.0379; q = 0.2678; length =  16110
+  11 vs.  16:  DIST =  0.2891; p = 0.0386; q = 0.2506; length =  15788
+  11 vs.  17:  DIST =  0.3301; p = 0.0459; q = 0.2842; length =  16248
+  11 vs.  18:  DIST =  0.3433; p = 0.0444; q = 0.2989; length =  15251
+  11 vs.  19:  DIST =  0.3166; p = 0.0427; q = 0.2739; length =  15790
+  12 vs.  13:  DIST =  0.2707; p = 0.0415; q = 0.2292; length =  16317
+  12 vs.  14:  DIST =  0.2702; p = 0.0347; q = 0.2355; length =  16198
+  12 vs.  15:  DIST =  0.2682; p = 0.0359; q = 0.2323; length =  16199
+  12 vs.  16:  DIST =  0.2032; p = 0.0325; q = 0.1707; length =  15830
+  12 vs.  17:  DIST =  0.2698; p = 0.0432; q = 0.2266; length =  16329
+  12 vs.  18:  DIST =  0.3290; p = 0.0462; q = 0.2828; length =  15258
+  12 vs.  19:  DIST =  0.2544; p = 0.0389; q = 0.2155; length =  15848
+  13 vs.  14:  DIST =  0.2999; p = 0.0420; q = 0.2579; length =  16093
+  13 vs.  15:  DIST =  0.2930; p = 0.0406; q = 0.2524; length =  16090
+  13 vs.  16:  DIST =  0.2730; p = 0.0440; q = 0.2290; length =  15805
+  13 vs.  17:  DIST =  0.1741; p = 0.0407; q = 0.1334; length =  16374
+  13 vs.  18:  DIST =  0.3378; p = 0.0481; q = 0.2896; length =  15271
+  13 vs.  19:  DIST =  0.1445; p = 0.0356; q = 0.1089; length =  15975
+  14 vs.  15:  DIST =  0.1736; p = 0.0231; q = 0.1505; length =  16254
+  14 vs.  16:  DIST =  0.2603; p = 0.0338; q = 0.2265; length =  15751
+  14 vs.  17:  DIST =  0.3002; p = 0.0414; q = 0.2588; length =  16160
+  14 vs.  18:  DIST =  0.3405; p = 0.0439; q = 0.2967; length =  15185
+  14 vs.  19:  DIST =  0.2884; p = 0.0398; q = 0.2486; length =  15755
+  15 vs.  16:  DIST =  0.2615; p = 0.0361; q = 0.2254; length =  15727
+  15 vs.  17:  DIST =  0.2968; p = 0.0419; q = 0.2549; length =  16152
+  15 vs.  18:  DIST =  0.3412; p = 0.0462; q = 0.2950; length =  15163
+  15 vs.  19:  DIST =  0.2826; p = 0.0386; q = 0.2440; length =  15737
+  16 vs.  17:  DIST =  0.2711; p = 0.0443; q = 0.2268; length =  15810
+  16 vs.  18:  DIST =  0.3429; p = 0.0481; q = 0.2949; length =  15557
+  16 vs.  19:  DIST =  0.2769; p = 0.0430; q = 0.2339; length =  16170
+  17 vs.  18:  DIST =  0.3392; p = 0.0499; q = 0.2893; length =  15272
+  17 vs.  19:  DIST =  0.1614; p = 0.0379; q = 0.1235; length =  15973
+  18 vs.  19:  DIST =  0.3523; p = 0.0497; q = 0.3027; length =  15803
+
+
+			Neighbor-joining Method
+
+ Saitou, N. and Nei, M. (1987) The Neighbor-joining Method:
+ A New Method for Reconstructing Phylogenetic Trees.
+ Mol. Biol. Evol., 4(4), 406-425
+
+
+ This is an UNROOTED tree
+
+ Numbers in parentheses are branch lengths
+
+
+ Cycle   1     =  SEQ:   3 (  0.01820) joins  SEQ:   5 (  0.01897)
+
+ Cycle   2     =  SEQ:   2 (  0.03830) joins  SEQ:   4 (  0.03552)
+
+ Cycle   3     =  SEQ:   1 (  0.02083) joins  SEQ:   8 (  0.02067)
+
+ Cycle   4     = Node:   1 (  0.02217) joins  SEQ:  19 (  0.04339)
+
+ Cycle   5     = Node:   1 (  0.00991) joins  SEQ:   9 (  0.05301)
+
+ Cycle   6     = Node:   1 (  0.01979) joins  SEQ:  13 (  0.07722)
+
+ Cycle   7     = Node:   1 (  0.00946) joins  SEQ:  17 (  0.08581)
+
+ Cycle   8     =  SEQ:   6 (  0.12250) joins  SEQ:  11 (  0.11463)
+
+ Cycle   9     =  SEQ:  14 (  0.08702) joins  SEQ:  15 (  0.08660)
+
+ Cycle  10     = Node:   6 (  0.03815) joins  SEQ:  18 (  0.19222)
+
+ Cycle  11     = Node:   6 (  0.01348) joins Node:  14 (  0.04813)
+
+ Cycle  12     = Node:   1 (  0.06146) joins Node:   6 (  0.00820)
+
+ Cycle  13     = Node:   3 (  0.07746) joins  SEQ:  10 (  0.09836)
+
+ Cycle  14     =  SEQ:   7 (  0.08368) joins  SEQ:  12 (  0.08269)
+
+ Cycle  15     = Node:   2 (  0.06690) joins  SEQ:  16 (  0.09633)
+
+ Cycle  16     = Node:   3 (  0.01034) joins Node:   7 (  0.01111)
+
+ Cycle  17 (Last cycle, trichotomy):
+
+		 Node:   1 (  0.01609) joins
+		 Node:   2 (  0.00857) joins
+		 Node:   3 (  0.00798) 
+
+
+			Bootstrap Confidence Limits
+
+
+ Random number generator seed =     111
+
+ Number of bootstrap trials   =    1000
+
+
+ Diagrammatic representation of the above tree: 
+
+ Each row represents 1 tree cycle; defining 2 groups.
+
+ Each column is 1 sequence; the stars in each line show 1 group; 
+ the dots show the other
+
+ Numbers show occurences in bootstrap samples.
+ 
+**.*.**************   1000 
+*.*.***************   1000 
+.******.***********   1000 
+.******.**********.   1000 
+.******..*********.   1000 
+.******..***.*****.   1000 
+.******..***.***.*.   1000 
+*****.****.********   1000 
+*************..****   1000 
+*****.****.******.*   1000 
+*****.****.**..**.*   1000 
+.****.*..*.*...*...   1000 
+**.*.****.*********   1000 
+******.****.*******   1000 
+*.*.***********.***   1000 
+**.*.*.**.*.*******    988 
+1232313113131112111

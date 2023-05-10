@@ -1,0 +1,1 @@
+baseline (Pygmy_chimpanzee,Chimpanzee,(Human,(Gorilla,(Orangutan,(Gibbon,((((Horse,White_rhinoceros),(Cat,(Harbor_seal,Gray_seal))),(Cow,(Finback_whale,Blue_whale))),((House_mouse,Rat),(Chicken,(Opossum,Wallaroo)))))))));

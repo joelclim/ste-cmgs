@@ -1,1 +1,1 @@
-# ste-cmgs
+# Species Tree Estimation based on Compressed Mitochondrial Genome Sequences

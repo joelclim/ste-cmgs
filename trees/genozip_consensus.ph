@@ -1,0 +1,1 @@
+[&R] (Chicken,((Gibbon,(Orangutan,(Gorilla,(Human,(Pygmy_chimpanzee,Chimpanzee))))),(Cow,((Rat,House_mouse),((((Cat,(Harbor_seal,Gray_seal)),(White_rhinoceros,Horse)),(Blue_whale,Finback_whale)),(Opossum,Wallaroo))))));

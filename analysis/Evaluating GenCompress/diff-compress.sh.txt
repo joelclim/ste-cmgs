@@ -1,0 +1,142 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Compresses FASTA file using various compression tools."
+    echo "Usage: $0 (locus) (bp length)"
+    echo "Notes:"
+    echo "1. Download the fasta file from NCBI."
+    echo "2. Expected file name format: (locus).fna."
+    echo "3. Tools: tar, gzip, zip, bzip2, bzip3"
+    exit 1
+fi
+
+LOCUS=$1
+BP_LENGTH=$2
+FASTA=$LOCUS.fna
+FASTA_SIZE=`stat -f%z $FASTA`
+echo -e "$FASTA\t(orig)\t$FASTA_SIZE"
+
+# ************
+#   tar
+# ************
+TAR="tar"
+echo "Compressing with $TAR"
+rm -f $FASTA.1.tar $FASTA.2.tar
+tar cf $FASTA.1.tar $FASTA
+tar cf $FASTA.2.tar $FASTA
+
+TAR_SIZE="NaN"
+TAR_PCNT="NaN"
+diff $FASTA.1.tar $FASTA.2.tar
+if [ $? == 0 ]; then
+  TAR_SIZE=`stat -f%z $FASTA.1.tar`
+  TAR_PCNT=`awk -vfs=$FASTA_SIZE -vcs=$TAR_SIZE 'BEGIN{printf("%.2f%%", (fs-cs)/fs * 100)}'`
+fi
+
+rm -f $FASTA.1.tar $FASTA.2.tar
+
+echo -e "${FASTA}\t${TAR}\t${TAR_SIZE}\t${TAR_PCNT}"
+
+
+
+# ************
+#   gzip
+# ************
+GZIP="gzip"
+echo "Compressing with $GZIP"
+rm -f $FASTA.gz $FASTA.1.gz $FASTA.2.gz
+gzip -9 -n $FASTA
+cp $FASTA.gz $FASTA.1.gz
+gunzip $FASTA.gz
+gzip -9 -n $FASTA
+cp $FASTA.gz $FASTA.2.gz
+gunzip $FASTA.gz
+
+GZIP_SIZE="NaN"
+GZIP_PCNT="NaN"
+diff $FASTA.1.gz $FASTA.2.gz
+if [ $? == 0 ]; then
+  GZIP_SIZE=`stat -f%z $FASTA.1.gz`
+  GZIP_PCNT=`awk -vfs=$FASTA_SIZE -vcs=$GZIP_SIZE 'BEGIN{printf("%.2f%%", (fs-cs)/fs * 100)}'`
+fi
+
+rm -f $FASTA.gz $FASTA.1.gz $FASTA.2.gz
+
+echo -e "${FASTA}\t${GZIP}\t${GZIP_SIZE}\t${GZIP_PCNT}"
+
+
+
+# ************
+#   zip
+# ************
+ZIP="zip"
+echo "Compressing with $ZIP"
+rm -f $FASTA.1.zip $FASTA.2.zip
+zip -9 -q -X $FASTA.1.zip $FASTA
+zip -9 -q -X $FASTA.2.zip $FASTA
+
+ZIP_SIZE="NaN"
+ZIP_PCNT="NaN"
+diff $FASTA.1.zip $FASTA.2.zip
+if [ $? == 0 ]; then
+  ZIP_SIZE=`stat -f%z $FASTA.1.zip`
+  ZIP_PCNT=`awk -vfs=$FASTA_SIZE -vcs=$ZIP_SIZE 'BEGIN{printf("%.2f%%", (fs-cs)/fs * 100)}'`
+fi
+
+rm -f $FASTA.1.zip $FASTA.2.zip
+
+echo -e "${FASTA}\t${ZIP}\t${ZIP_SIZE}\t${ZIP_PCNT}"
+
+
+# ************
+#   bzip2
+# ************
+BZIP2="bzip2"
+echo "Compressing with $BZIP2"
+rm -f $FASTA.bz2 $FASTA.1.bz2 $FASTA.2.bz2
+bzip2 -z -9 $FASTA
+cp $FASTA.bz2 $FASTA.1.bz2
+bzip2 -d $FASTA.bz2
+bzip2 -z -9 $FASTA
+cp $FASTA.bz2 $FASTA.2.bz2
+bzip2 -d $FASTA.bz2
+
+BZIP2_SIZE="NaN"
+BZIP2_PCNT="NaN"
+diff $FASTA.1.bz2 $FASTA.2.bz2
+if [ $? == 0 ]; then
+  BZIP2_SIZE=`stat -f%z $FASTA.1.bz2`
+  BZIP2_PCNT=`awk -vfs=$FASTA_SIZE -vcs=$BZIP2_SIZE 'BEGIN{printf("%.2f%%", (fs-cs)/fs * 100)}'`
+fi
+
+rm -f $FASTA.bz2 $FASTA.1.bz2 $FASTA.2.bz2
+
+echo -e "${FASTA}\t${BZIP2}\t${BZIP2_SIZE}\t${BZIP2_PCNT}"
+
+
+
+# ************
+#   bzip3
+# ************
+BZIP3="bzip3"
+echo "Compressing with $BZIP3"
+rm -f $FASTA.bz3 $FASTA.1.bz3 $FASTA.2.bz3
+bzip3 $FASTA
+mv $FASTA.bz3 $FASTA.1.bz3
+bzip3 $FASTA
+mv $FASTA.bz3 $FASTA.2.bz3
+
+BZIP3_SIZE="NaN"
+BZIP3_PCNT="NaN"
+diff $FASTA.1.bz3 $FASTA.2.bz3
+if [ $? == 0 ]; then
+  BZIP3_SIZE=`stat -f%z $FASTA.1.bz3`
+  BZIP3_PCNT=`awk -vfs=$FASTA_SIZE -vcs=$BZIP3_SIZE 'BEGIN{printf("%.2f%%", (fs-cs)/fs * 100)}'`
+fi
+
+rm -f $FASTA.bz3 $FASTA.1.bz3 $FASTA.2.bz3
+
+echo -e "${FASTA}\t${BZIP3}\t${BZIP3_SIZE}\t${BZIP3_PCNT}"
+
+echo -e "${LOCUS}\t${BP_LENGTH}\t${FASTA_SIZE}\t${TAR_SIZE}\t${TAR_PCNT}\t${GZIP_SIZE}\t${GZIP_PCNT}\t${ZIP_SIZE}\t${ZIP_PCNT}\t${BZIP2_SIZE}\t${BZIP2_PCNT}\t${BZIP3_SIZE}\t${BZIP3_PCNT}"
+

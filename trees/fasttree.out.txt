@@ -1,0 +1,20 @@
+$ fasttree -nt mammals.phy > fasttree_mammals_ml.ph
+FastTree Version 2.1.11 Double precision (No SSE3)
+Alignment: mammals.phy
+Nucleotide distances: Jukes-Cantor Joins: balanced Support: SH-like 1000
+Search: Normal +NNI +SPR (2 rounds range 10) +ML-NNI opt-each=1
+TopHits: 1.00*sqrtN close=default refresh=0.80
+ML Model: Jukes-Cantor, CAT approximation with 20 rate categories
+Initial topology in 0.09 seconds
+Refining topology: 17 rounds ME-NNIs, 2 rounds ME-SPRs, 8 rounds ML-NNIs
+Total branch-length 2.181 after 1.62 sec7, 1 of 17 splits   
+ML-NNI round 1: LogLk = -193662.736 NNIs 0 max delta 0.00 Time 2.60
+Switched to using 20 rate categories (CAT approximation)14 of 20   
+Rate categories were divided by 0.821 so that average rate = 1.0
+CAT-based log-likelihoods may not be comparable across runs
+Use -gamma for approximate but comparable Gamma(20) log-likelihoods
+ML-NNI round 2: LogLk = -174731.123 NNIs 0 max delta 0.00 Time 2.84
+Turning off heuristics for final round of ML NNIs (converged)
+ML-NNI round 3: LogLk = -174639.259 NNIs 0 max delta 0.00 Time 3.62 (final)
+Optimize all lengths: LogLk = -174638.528 Time 3.83
+Total time: 5.86 seconds Unique: 19/19 Bad splits: 0/16

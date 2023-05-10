@@ -1,0 +1,3 @@
+baseline	(Pygmy_chimpanzee,Chimpanzee,(Human,(Gorilla,(Orangutan,(Gibbon,((((Horse,White_rhinoceros),(Cat,(Harbor_seal,Gray_seal))),(Cow,(Finback_whale,Blue_whale))),((House_mouse,Rat),(Chicken,(Opossum,Wallaroo)))))))));
+bzip3 		(((Opossum,(Wallaroo,(House_mouse,Rat))),(White_rhinoceros,Horse)),((Cat,(Gray_seal,Harbor_seal)),((Cow,(Finback_whale,Blue_whale)),(Chicken,(Gibbon,(Orangutan,(Human,(Gorilla,(Pygmy_chimpanzee,Chimpanzee)))))))));
+genozip		(Chicken,((Gibbon,(Orangutan,(Gorilla,(Human,(Pygmy_chimpanzee,Chimpanzee))))),(Cow,((Rat,House_mouse),((((Cat,(Harbor_seal,Gray_seal)),(White_rhinoceros,Horse)),(Blue_whale,Finback_whale)),(Opossum,Wallaroo))))));
